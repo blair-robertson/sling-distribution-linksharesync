@@ -15,12 +15,47 @@ Author    : 34622
 Publish 1 : 34623
 Publish 2 : 34625
 
-Links
-------
+Cloning Publish instance
+------------------------
 
+Remember that for the User Sync (not this package, but related), it's important that all the user paths are the same on all environments.
+Therefore it's best to clone 1 publish, then change it's ClusterID and SlingID
+
+	# Reset Sling ID - stop AEM first
+	find crx-quickstart/launchpad/felix -name sling.id -print -exec rm {} \;
+	
+	# Reset Cluster ID
+	java -jar oak-run.jar resetclusterid < repository path | Mongo URI >
+
+
+Verification:
+	
+	# Sling ID
+	http://pub1.local:34623/system/console/status-slingsettings
+	http://pub2.local:34625/system/console/status-slingsettings
+	
+	# ClusterID
+	http://pub1.local:34623/system/console/status-Repository%20Apache%20Jackrabbit%20Oak
+	http://pub2.local:34625/system/console/status-Repository%20Apache%20Jackrabbit%20Oak
+
+
+Investigation Links
+-------------------
+
+### Distribution UI
 	http://author.local:34622/libs/granite/distribution/content/distribution.html
 	http://pub1.local:34623/libs/granite/distribution/content/distribution.html
 	http://pub2.local:34625/libs/granite/distribution/content/distribution.html
+
+### Packages waiting to be distributed (only ADD/MODIFY, deletes do not have packages only events)
+
+	http://pub1.local:34623/crx/de/index.jsp#/var/sling/distribution/packages/linksharesync-vlt/data
+	http://pub2.local:34625/crx/de/index.jsp#/var/sling/distribution/packages/linksharesync-vlt/data
+
+### Events
+	http://pub1.local:34623/crx/de/index.jsp#/var/eventing/jobs/unassigned/org.apache.sling.distribution.queue.linksharesync-reverse-queue-agent.default
+	http://pub2.local:34625/crx/de/index.jsp#/var/eventing/jobs/unassigned/org.apache.sling.distribution.queue.linksharesync-reverse-queue-agent.default
+
 
 Install Service Users first
 ---------------------------
