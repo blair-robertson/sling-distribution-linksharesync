@@ -14,7 +14,13 @@ Default Setup
 Author    : 34622
 Publish 1 : 34623
 Publish 2 : 34625
-```
+
+Links
+------
+
+	http://author.local:34622/libs/granite/distribution/content/distribution.html
+	http://pub1.local:34623/libs/granite/distribution/content/distribution.html
+	http://pub2.local:34625/libs/granite/distribution/content/distribution.html
 
 Install Service Users first
 ---------------------------
@@ -49,6 +55,11 @@ Run ``execute()`` from JMX console:
 Create Encrypted Password Transport Secret Provider
 ---------------------------------------------------
 
+### Replicate the Crypto Keys
+
+[https://docs.adobe.com/docs/en/aem/6-2/deploy/communities.html#Replicate the Crypto Key]
+
+
 ### Encrypt a password
 
 1. Create/generate a password
@@ -76,15 +87,11 @@ Create Encrypted Password Transport Secret Provider
 
 
 
-	https://docs.adobe.com/docs/en/aem/6-2/deploy/communities.html#Replicate the Crypto Key
+Install the UI.Apps
+-------------------
 
-
-
-
-
-
-
-
+	cd ui.apps
+	mvn clean install -PautoInstallPackage -PautoInstallPackagePublish -PautoInstallPackagePublish2 -Daem.port=34622 -Daem.publish.port=34623 -Daem.publish2.port=34625
 
 
 

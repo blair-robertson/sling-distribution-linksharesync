@@ -14,5 +14,5 @@
 	type="jcrvlt"
 	MEGA_BYTES="MEGA_BYTES"
 	fileThreshold="{Long}1"
-	package.roots=""
+	package.roots="/var/dam/share"
 	/>
