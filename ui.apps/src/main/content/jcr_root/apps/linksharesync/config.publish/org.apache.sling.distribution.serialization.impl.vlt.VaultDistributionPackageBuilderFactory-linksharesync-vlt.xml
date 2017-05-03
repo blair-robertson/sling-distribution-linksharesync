@@ -4,7 +4,7 @@
 	autoSaveThreshold="{Long}-1"
 	importMode=""
 	name="linksharesync-vlt"
-	package.filters="[/var/dam/share|+.*/rep:policy]"
+	package.filters="[/var/dam/share|+/var/dam/share/.+/rep:policy|-/var/dam/share/rep:policy]"
 	useBinaryReferences="{Boolean}false"
 	tempFsFolder=""
 	aclHandling="OVERWRITE"

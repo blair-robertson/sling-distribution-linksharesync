@@ -4,7 +4,7 @@
 	details=""
 	name="linksharesync-agent"
 	title="Link Share Sync Agent"
-	transportSecretProvider.target="(name=default)"
+	transportSecretProvider.target="(name=linksharesync-publishUser)"
 	queue.processing.enabled="{Boolean}true"
 	retry.attempts="{Long}100"
 	packageImporter.endpoints="[http://pub1.local:34623/libs/sling/distribution/services/importers/linksharesync-importer,http://pub2.local:34625/libs/sling/distribution/services/importers/linksharesync-importer]"

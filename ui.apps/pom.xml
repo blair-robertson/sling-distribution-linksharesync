@@ -217,7 +217,7 @@
                         </configuration>
                         <executions>
                             <execution>
-                                <id>sleep-for-a-while-pub1</id>
+                                <id>sleep-for-a-while</id>
                                 <phase>pre-integration-test</phase>
                                 <goals>
                                     <goal>run</goal>
@@ -267,7 +267,7 @@
                         </configuration>
                         <executions>
                             <execution>
-                                <id>sleep-for-a-while-pub2</id>
+                                <id>sleep-for-a-while</id>
                                 <phase>pre-integration-test</phase>
                                 <goals>
                                     <goal>run</goal>
