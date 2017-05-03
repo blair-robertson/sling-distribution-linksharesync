@@ -10,10 +10,10 @@ Replication ``/var/dam/share``
 
 Default Setup
 -------------
-```
-Author    : 34622
-Publish 1 : 34623
-Publish 2 : 34625
+
+	Author    : 34622
+	Publish 1 : 34623
+	Publish 2 : 34625
 
 Cloning Publish instance
 ------------------------
