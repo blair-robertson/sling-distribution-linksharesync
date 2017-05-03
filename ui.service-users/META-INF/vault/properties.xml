@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Link Share Sync Sling Distribution - ui.service-users</comment>
+<entry key="createdBy">brobertson</entry>
+<entry key="name">sling-distribution.ui.service-users</entry>
+<entry key="created">2017-05-03T14:18:23.079+0200</entry>
+<entry key="groupId">ban74737</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">ban74737</entry>
+<entry key="description">ui.service-users package for example Sling Content Distribution</entry>
+<entry key="artifactId">sling-distribution.ui.service-users</entry>
+<entry key="path">/etc/packages/ban74737/sling-distribution.ui.service-users.zip</entry>
+</properties>

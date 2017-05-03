@@ -1,0 +1,19 @@
+<'rep'='internal'>
+
+[rep:Password]
+  - * (undefined) protected
+  - * (undefined) protected multiple
+
+[rep:Cache] > rep:UnstructuredProtected
+  - rep:expiration (long) protected ignore
+
+[rep:UnstructuredProtected]
+  abstract
+  - * (undefined) protected multiple ignore
+  - * (undefined) protected ignore
+  + * (rep:UnstructuredProtected) protected ignore
+
+[rep:RepoAccessControllable]
+  mixin
+  + rep:repoPolicy (rep:Policy) protected ignore
+

@@ -30,10 +30,10 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>sling-distribution.ui.apps</artifactId>
+    <artifactId>sling-distribution.ui.service-users</artifactId>
     <packaging>content-package</packaging>
-    <name>Link Share Sync Sling Distribution - UI apps</name>
-    <description>UI apps package for example Sling Content Distribution</description>
+    <name>Link Share Sync Sling Distribution - ui.service-users</name>
+    <description>ui.service-users package for example Sling Content Distribution</description>
 
     <!-- <scm>
         <connection></connection>
@@ -152,29 +152,6 @@
                             </execution>
                         </executions>
                      </plugin>
-                     <!--
-                      When installing service users and then ui.apps, we need to wait for a small amount of time for the 
-                      service users to register, otherwise the JcrTrigger that uses the service user fails to start
-                      -->
-                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <configuration>
-                            <tasks>
-                                 <echo message="Pausing for 5 seconds to allow service users to register" />
-                                 <sleep seconds="5" />
-                            </tasks>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sleep-for-a-while</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                            </execution>
-                       </executions>
-                     </plugin>
                  </plugins>
             </build>
         </profile>
@@ -202,29 +179,6 @@
                             </execution>
                         </executions>
                      </plugin>
-                     <!--
-                      When installing service users and then ui.apps, we need to wait for a small amount of time for the 
-                      service users to register, otherwise the JcrTrigger that uses the service user fails to start
-                      -->
-                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <configuration>
-                            <tasks>
-                                 <echo message="Pausing for 5 seconds to allow service users to register" />
-                                 <sleep seconds="5" />
-                            </tasks>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sleep-for-a-while-pub1</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                            </execution>
-                       </executions>
-                     </plugin>
                  </plugins>
             </build>
         </profile>
@@ -251,29 +205,6 @@
                                 </configuration>
                             </execution>
                         </executions>
-                     </plugin>
-                     <!--
-                      When installing service users and then ui.apps, we need to wait for a small amount of time for the 
-                      service users to register, otherwise the JcrTrigger that uses the service user fails to start
-                      -->
-                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <configuration>
-                            <tasks>
-                                 <echo message="Pausing for 5 seconds to allow service users to register" />
-                                 <sleep seconds="5" />
-                            </tasks>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sleep-for-a-while-pub2</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                            </execution>
-                       </executions>
                      </plugin>
                  </plugins>
             </build>

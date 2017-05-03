@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/linksharesync/acls" />
+    <filter root="/apps/linksharesync/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-linksharesync.xml" />
+    <!-- <filter root="/home/users/system/linksharesync-admin" />-->
+</workspaceFilter>

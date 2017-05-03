@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: brobertson
+Build-Jdk: 1.8.0_121
+Specification-Title: Link Share Sync Sling Distribution - ui.service-u
+ sers
+Specification-Version: 1.0-SNAPSHOT
+Implementation-Title: Link Share Sync Sling Distribution - ui.service-
+ users
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: ban74737
+
