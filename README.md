@@ -3,9 +3,19 @@ Sling Distribution configuration package for publish farm replication for the As
 Replication ``/var/dam/share``
 
 
-**Building:**
+Building
+--------
+
 
 	mvn clean install
+
+### Available Profiles
+| -PautoInstallPackage         | -Daem.host=... -Daem.port=... |
+| -PautoInstallPackagePublish  | -Daem.publish.host=... -Daem.publish.port=... |
+| -PautoInstallPackagePublish2 | -Daem.publish2.host=... -Daem.publish2.port=... |
+
+
+	mvn clean install -PautoInstallPackage -PautoInstallPackagePublish -PautoInstallPackagePublish2 -Daem.port=34622 -Daem.publish.port=34623 -Daem.publish2.port=34625 '-Dsling.password=password' '-Dvault.password=password'
 
 
 Default Setup
@@ -70,16 +80,16 @@ https://github.com/Netcentric/accesscontroltool
 
 Download and install the 2 packages.
 
-Edit the configuration for each (could be set by config, but already used in another project this was part of): 
-Set the **Configuration storage path** to ``/apps/linksharesync/acls``
+Edit the configuration for each (could be set by config, but already used in another project this was part of):
+
+1. Set the **Configuration storage path** to ``/apps/linksharesync/acls``
 
 	http://author.local:34622/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
 	http://pub1.local:34623/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
 	http://pub2.local:34625/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
  
 
-
-Run ``execute()`` from JMX console:
+2. Run ``execute()`` from JMX console:
 
 	http://author.local:34622/system/console/jmx/biz.netcentric.cq.tools%3Atype%3DACTool
 	http://pub1.local:34623/system/console/jmx/biz.netcentric.cq.tools%3Atype%3DACTool
