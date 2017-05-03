@@ -1,0 +1,21 @@
+.vlt
+.classpath
+.project
+.settings/
+target/
+.DS_Store
+
+#Intellij
+.idea/
+*.iml
+generated/
+
+#vlt directories
+*/src/main/content/jcr_root/.content.xml
+*/src/main/content/jcr_root/apps/.content.xml
+*/src/main/content/jcr_root/etc/.content.xml
+*/src/main/content/jcr_root/etc/designs/.content.xml
+*/src/main/content/jcr_root/etc/clientlibs/.content.xml
+*/src/main/content/jcr_root/META-INF
+*/src/main/content/jcr_root/WEB-INF
+.pmd

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+	autoSaveThreshold="{Long}-1"
+	importMode=""
+	name="linksharesync-vlt"
+	package.filters="[/var/dam/share|+.*/rep:policy]"
+	useBinaryReferences="{Boolean}false"
+	tempFsFolder=""
+	aclHandling="OVERWRITE"
+	digestAlgorithm="NONE"
+	property.filters="[]"
+	useOffHeapMemory="{Boolean}false"
+	type="jcrvlt"
+	MEGA_BYTES="MEGA_BYTES"
+	fileThreshold="{Long}1"
+	package.roots=""
+	/>

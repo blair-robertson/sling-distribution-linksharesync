@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+	name="linksharesync-reverse-queue-agent"
+	details="Friendly description of agent..."
+	allowed.roots="[/var/dam/share]"
+	serviceName="linksharesync-distributionService"
+	enabled="{Boolean}true"
+	packageBuilder.target="(name=linksharesync-vlt)"
+	title="Link Share Sync Reverse Queue"
+	requestAuthorizationStrategy.target="(name=default)"
+	log.level="debug"
+	triggers.target="(name=linksharesync-jcr-trigger)"
+/>
