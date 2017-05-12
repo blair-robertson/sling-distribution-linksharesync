@@ -10,9 +10,10 @@ Building
 	mvn clean install
 
 ### Available Profiles
-| -PautoInstallPackage         | -Daem.host=... -Daem.port=... |
-| -PautoInstallPackagePublish  | -Daem.publish.host=... -Daem.publish.port=... |
-| -PautoInstallPackagePublish2 | -Daem.publish2.host=... -Daem.publish2.port=... |
+
+	| -PautoInstallPackage         | -Daem.host=...          -Daem.port=... |
+	| -PautoInstallPackagePublish  | -Daem.publish.host=...  -Daem.publish.port=... |
+	| -PautoInstallPackagePublish2 | -Daem.publish2.host=... -Daem.publish2.port=... |
 
 
 	mvn clean install -PautoInstallPackage -PautoInstallPackagePublish -PautoInstallPackagePublish2 -Daem.port=34622 -Daem.publish.port=34623 -Daem.publish2.port=34625 '-Dsling.password=password' '-Dvault.password=password'
@@ -32,7 +33,7 @@ Remember that for the User Sync (not this package, but related), it's important 
 Therefore it's best to clone 1 publish, then change it's ClusterID and SlingID
 
 	# Reset Sling ID - stop AEM first
-	find crx-quickstart/launchpad/felix -name sling.id -print -exec rm {} \;
+	find crx-quickstart/launchpad/felix -name sling.id.file -print -exec rm {} \;
 	
 	# Reset Cluster ID
 	java -jar oak-run.jar resetclusterid < repository path | Mongo URI >
