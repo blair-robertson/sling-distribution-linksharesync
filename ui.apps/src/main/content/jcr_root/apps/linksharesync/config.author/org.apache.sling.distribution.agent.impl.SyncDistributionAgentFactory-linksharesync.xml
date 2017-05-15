@@ -9,7 +9,7 @@
 	retry.attempts="{Long}100"
 	packageImporter.endpoints="[http://pub1.local:34623/libs/sling/distribution/services/importers/linksharesync-importer,http://pub2.local:34625/libs/sling/distribution/services/importers/linksharesync-importer]"
 	packageExporter.endpoints="[http://pub1.local:34623/libs/sling/distribution/services/exporters/linksharesync-reverse-exporter,http://pub2.local:34625/libs/sling/distribution/services/exporters/linksharesync-reverse-exporter]"
-	enabled="{Boolean}false"
+	enabled="{Boolean}true"
 	serviceName="linksharesync-distributionService"
 	pull.items="{Long}100"
 	retry.strategy="none"

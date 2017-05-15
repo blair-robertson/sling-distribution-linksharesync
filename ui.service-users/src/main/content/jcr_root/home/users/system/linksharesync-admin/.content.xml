@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
-    jcr:primaryType="rep:SystemUser"
-    jcr:uuid="4bc01b57-40ba-31bd-98dd-a38538c4ccc9"
-    rep:authorizableId="linksharesync-admin"
-    rep:principalName="linksharesync-admin">
-</jcr:root>

@@ -1,27 +1,51 @@
 
+- group_config:
+
+  - linksharesync-users:
+    - name: Link Share Distribution Users
+
 - user_config:
 
-  - linksharesync-admin:
+  - linksharesync-service:
     - name: Link Share Distribution Service User
-      path: system
       isSystemUser: true
+      isMemberOf: linksharesync-users
+
+  - linksharesync-admin:
+    - name: Link Share Distribution Receiver User
+      path: linksharesync
+      password: mypassword
+      isSystemUser: false
+      isMemberOf: linksharesync-users, operators
+
 
 - ace_config:
 
-  - linksharesync-admin:
+  - linksharesync-users:
     - path: /var/sling/distribution/packages
       permission: allow
       privileges: jcr:all
-
-    - path: /libs/sling/distribution
-      permission: allow
-      privileges: jcr:read
 
     - path: /etc/distribution
       permission: allow
       privileges: jcr:all
 
+    - path: /var
+      permission: allow
+      privileges: jcr:read
+      repGlob: ""
+
+    - path: /var
+      permission: allow
+      privileges: jcr:read
+      repGlob: /jcr:*
+
+    - path: /var/dam
+      permission: allow
+      privileges: jcr:read
+
     - path: /var/dam/share
       permission: allow
       actions:
       privileges: jcr:modifyAccessControl,jcr:read,jcr:readAccessControl,rep:write,crx:replicate
+

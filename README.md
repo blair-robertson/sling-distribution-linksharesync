@@ -1,6 +1,6 @@
 Sling Distribution configuration package for publish farm replication for the Assets Link Share functionality.
 
-Replication ``/var/dam/share``
+Replication `/var/dam/share`
 
 
 Building
@@ -11,9 +11,9 @@ Building
 
 ### Available Profiles
 
-	| -PautoInstallPackage         | -Daem.host=...          -Daem.port=... |
-	| -PautoInstallPackagePublish  | -Daem.publish.host=...  -Daem.publish.port=... |
-	| -PautoInstallPackagePublish2 | -Daem.publish2.host=... -Daem.publish2.port=... |
+	-PautoInstallPackage         -Daem.host=...          -Daem.port=...          
+	-PautoInstallPackagePublish  -Daem.publish.host=...  -Daem.publish.port=...  
+	-PautoInstallPackagePublish2 -Daem.publish2.host=... -Daem.publish2.port=... 
 
 
 	mvn clean install -PautoInstallPackage -PautoInstallPackagePublish -PautoInstallPackagePublish2 -Daem.port=34622 -Daem.publish.port=34623 -Daem.publish2.port=34625 '-Dsling.password=password' '-Dvault.password=password'
@@ -83,14 +83,14 @@ Download and install the 2 packages.
 
 Edit the configuration for each (could be set by config, but already used in another project this was part of):
 
-1. Set the **Configuration storage path** to ``/apps/linksharesync/acls``
+1. Set the **Configuration storage path** to `/apps/linksharesync/acls`
 
 	http://author.local:34622/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
 	http://pub1.local:34623/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
 	http://pub2.local:34625/system/console/configMgr/biz.netcentric.cq.tools.actool.aceservice.impl.AceServiceImpl
  
 
-2. Run ``execute()`` from JMX console:
+2. Run `execute()` from JMX console:
 
 	http://author.local:34622/system/console/jmx/biz.netcentric.cq.tools%3Atype%3DACTool
 	http://pub1.local:34623/system/console/jmx/biz.netcentric.cq.tools%3Atype%3DACTool
@@ -120,13 +120,13 @@ Create Encrypted Password Transport Secret Provider
 3. Create a new configuration and enter the following details:
 
 	name: linksharesync-publishUser
-	usename: linkshare-admin
+	usename: linksharesync-admin
 	password: <encrypted password from above>
 	
 
 ### Set password on each publish
 
-1. On each publish go to the User Admin and set the password for the **linkshare-admin** user
+1. On each publish go to the User Admin and set the password for the **linksharesync-admin** user
 
 	http://pub1.local:34623/libs/granite/security/content/useradmin.html
 	http://pub2.local:34625/libs/granite/security/content/useradmin.html
